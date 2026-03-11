@@ -1,10 +1,25 @@
-public class UseCase1PalindromeCheckerApp {
+import java.util.Scanner;
+
+public class UseCase2PalindromeCheck {
 
     public static void main(String[] args) {
 
-        System.out.println("Welcome to the Palindrome Checker Management System");
-        System.out.println("Version: 1.0");
-        System.out.println("System initialized successfully.");
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        String rev = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev = rev + str.charAt(i);
+        }
+
+        if (str.equals(rev)) {
+            System.out.println("Palindrome: True");
+        } else {
+            System.out.println("Palindrome: False");
+        }
 
     }
 }
